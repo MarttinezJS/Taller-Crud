@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]=opciones style="width: 100%; height: 100%;">
+    <ion-slide>
+
+      <form #formulario=ngForm (ngSubmit)="onClick( formulario.value )">
+        <ion-list>
+
+          <ion-item>
+            <ion-label position="floating">Titulo</ion-label>
+            <ion-input type="text" ngModel name=titulo></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Post</ion-label>
+            <ion-input type="text" ngModel name=post></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-button type=submit expand="block" fill="clear" shape="round">
+              Agregar
+            </ion-button>
+          </ion-item>
+
+        </ion-list>
+      </form>
+
+
+    </ion-slide>
+  </ion-slides>
+</ion-content>
